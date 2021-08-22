@@ -1,0 +1,9 @@
+<h1>Viewer</h1>
+
+<%= render 'searchform' %>
+
+<% unless @list.nil? %>
+  <% @list.each do |image_url| %>
+     <%= image_tag(image_url, {style: "width:300px;"}) %>
+  <% end %>
+<% end %>
